@@ -1,0 +1,42 @@
+---
+config:
+  layout: elk
+---
+classDiagram
+direction LR
+    class User {
+	    +UUID _id
+	    +String email
+	    +String name
+	    +String role
+	    +Int points
+	    +List badges
+	    +String authProvider
+    }
+
+    class Report {
+	    +UUID _id
+	    +UUID userId
+	    +GeoPoint location
+	    +String photoUrl
+	    +Enum status
+	    +List reactions
+    }
+
+    class Badge {
+	    +UUID _id
+	    +String label
+	    +String description
+	    +Int threshold
+    }
+
+    class Comment {
+	    +UUID userId
+	    +String text
+	    +DateTime createdAt
+    }
+
+    User "1" --o "0..*" Report : "crée"
+    User "1" --o "0..*" Badge : "possède"
+    Report "1" *-- "0..*" Comment : "contient"
+    Report "0..*" -- "1" User : "validé par (Admin)"

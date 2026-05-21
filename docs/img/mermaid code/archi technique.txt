@@ -1,0 +1,44 @@
+---
+config:
+  layout: elk
+---
+flowchart TB
+ subgraph Presentation_Layer["Presentation /rest"]
+        CTRL["Controllers"]
+        MAP_R["Mappers"]
+        DTO_IN["DTO In - Commandes"]
+        DTO_OUT["DTO Out - Requêtes"]
+  end
+ subgraph Logic["Core Logic"]
+        UC["Use Cases /usecases"]
+        ENT["Entities /request"]
+        EVT["Events /events"]
+  end
+ subgraph Ports_Out["Ports Out /ports/out"]
+        DB_P["Database Ports"]
+        INF_P["Infrastructure Ports"]
+  end
+ subgraph Domain_Layer["Domain /domain - ISOLÉ"]
+    direction TB
+        Logic
+        Ports_Out
+  end
+ subgraph Persistence_Layer["Persistence /database"]
+        DB_AD["Database Adapters /adapters"]
+        DOC["Documents /documents"]
+  end
+ subgraph Infrastructure_Layer["Infrastructure /infrastructure"]
+        INF_AD["Infra Adapters /adapters"]
+        FIRE["Firebase / Cloudinary / Brevo"]
+  end
+   subgraph Security_Layer["Security /security"]
+        SEC["Security Config / JWT"]
+  end
+    CTRL --> DTO_IN
+    CTRL --> SEC
+    DTO_IN --> UC
+    UC --> ENT & DB_P & INF_P
+    DB_P --> DB_AD
+    INF_P --> INF_AD
+    INF_AD --> FIRE
+    DB_AD --> DOC

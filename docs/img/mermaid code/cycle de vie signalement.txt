@@ -1,0 +1,17 @@
+sequenceDiagram
+    participant C as Citoyen (Web/Mobile)
+    participant A as API Backend
+    participant AD as Admin (Web)
+    participant S as Système Reward
+
+    C->>A: Soumettre signalement (Photo + GPS + Desc)
+    Note over A: Statut: "En attente"
+    A->>AD: Afficher sur Panel Admin
+    AD->>A: Valider signalement (après enquête)
+    Note over A: Statut: "Validé"
+    A->>S: Déclencher calcul récompense
+    S->>A: Attribuer 10 points
+    opt Seuil de badge atteint
+        S->>A: Débloquer Badge (ex: "Citoyen Actif")
+    end
+    A-->>C: Notification Push/Email (Statut + Reward)

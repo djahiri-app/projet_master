@@ -1,0 +1,34 @@
+---
+config:
+  layout: dagre
+---
+flowchart LR
+ subgraph GitHub["GitHub Repo"]
+        CODE["Code Source"]
+        GHA["GitHub Actions"]
+  end
+ subgraph Registry["GitHub Container Registry"]
+        IMG["Images Docker ghcr.io"]
+  end
+ subgraph VPS_Staging["VPS Pre-prod / Staging"]
+    direction TB
+        NGX_S["Nginx Proxy"]
+        API_S["Container API :staging"]
+        WEB_S["Container Front :staging"]
+  end
+ subgraph VPS_Prod["VPS Production"]
+    direction TB
+        NGX_P["Nginx Proxy"]
+        API_P["Container API :latest"]
+        WEB_P["Container Front :latest"]
+  end
+ subgraph Cloud["Data Persistence"]
+        DBPROD[("MongoDB Atlas Cloud prod")]
+        DBSTG[("MongoDB Atlas Cloud stg")]
+  end
+    CODE --> GHA
+    GHA -- Build & Push --> IMG
+    IMG -- Deploy staging --> API_S
+    IMG -- Deploy production --> API_P
+    API_S --> DBSTG
+    API_P --> DBPROD

@@ -1,0 +1,19 @@
+sequenceDiagram
+    autonumber
+    participant Client as Citoyen (Mobile/Web)
+    participant Rest as Rest Controller
+    participant UC as CreateReportUseCase (Domain)
+    participant DBin as ReportCommandAdapter (In Adapter)
+    participant Cloud as CloudinaryAdapter (Out Adapter)
+
+    Client->>Rest: POST /reports (DTO In: Photo, GPS)
+    Rest->>Rest: Map DTO to Domain Request
+    Rest->>UC: execute(ReportRequest)
+    UC->>UC: Valider règles métier (quota, etc.)
+
+    UC->>Cloud: uploadImage(photo)
+    Cloud-->>UC: photoUrl
+    UC->>DBin: save(ReportEntity)
+    DBin-->>UC: Success
+    UC-->>Rest: void
+    Rest-->>Client: 201 Created (DTO Out)

@@ -1,0 +1,26 @@
+---
+config:
+  layout: dagre
+---
+flowchart TB
+ subgraph Citizens_Admins["Utilisateurs"]
+        U1["Citoyen - App Mobile Flutter"]
+        U2["Citoyen/Admin - Web ReactJS"]
+  end
+ subgraph VPS_Environment["Infrastructure Docker sur Ubuntu"]
+        NGX["Reverse Proxy Nginx + SSL"]
+        API["API Backend Container - Spring Boot"]
+        WEB["Frontend Web Container"]
+  end
+ subgraph External_Services["Services Cloud"]
+        DB[("MongoDB Atlas")]
+        CLD["Cloudinary - Images"]
+        FB["Firebase - Push"]
+        BV["Brevo - Email"]
+        LT["Letexto - SMS"]
+  end
+    U1 --> API
+    U2 --> WEB
+    WEB --> NGX
+    NGX --> API
+    API --> DB & CLD & FB & BV & LT
