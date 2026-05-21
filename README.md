@@ -163,8 +163,8 @@ Pour l'utilisateur :
 Ou en créant un nouveau compte.
 
 ### 1. Télécharger l'apk
-Depuis un téléphone android ou un emulateur android :
-<a href="executables\djahiri.apk">Télécharger l'apk</a>
+Dézipper le fichier .zip puis installer l'apk depuis un téléphone android ou un emulateur android :
+<a href="executables\djahiri.apk">Accéder à l'apk ici</a>
 
 ### 2. Utilisation
 
