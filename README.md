@@ -8,15 +8,13 @@
 
 ## Table des matières
 
-- [Présentation](#présentation)
-- [Fonctionnalités principales](#fonctionnalités_principaless)
-- [Interfaces de l’application](#️interfaces-de-lapplication)
-- [Technologies utilisées](#technologies-utilisées)
-- [Architecture](#architecture)
-- [Installation](#installation)
-- [Lancement du projet](#lancement-du-projet)
-- [Structure du projet](#structure-du-projet)
-- [Auteurs](#auteurs)
+- [Présentation](##présentation)
+- [Fonctionnalités principales](##fonctionnalités_principaless)
+- [Interfaces de l’application](##️interfaces-de-lapplication)
+- [Technologies utilisées](##technologies-utilisées)
+- [Architecture](##architecture)
+- [Installation et utilisation](#installation-et-utilisation)
+- [Auteurs](##auteurs)
 
 ## 🌍 Présentation
 
@@ -29,6 +27,15 @@ L’application permet aux citoyens de signaler facilement des problèmes observ
 Au-delà du simple signalement, Djahiri valorise l’engagement citoyen grâce à un système de points, de badges et de suivi des signalements. Chaque contribution devient ainsi visible, mesurable et reconnue.
 
 Le projet propose également un espace d’administration permettant de consulter, modérer, valider ou rejeter les signalements envoyés par les citoyens.
+
+Des livrables sont disponibles dans le dossier "Livrables" afin d'approfondir la compréhension du projet :
+
+- Livrable 1 : <a href="Livrables/Livrable 1_projet master_Yves Roland DEBO_Zakariae BOUAMAMA.pdf" target="_blank">[Description du projet, planing et cahier des charges]</a>
+
+- Livrable 2 : <a href="Livrables/livrable 2___Rapport_d_avancement___projet_master.pdf" target="_blank">[Conception et réalisation du projet]</a>
+
+- Rapport final : <a href="Livrables/livrable final___projet_master___Yves Roland_Zakariae.pdf" target="_blank">[Rapport final du projet faisant la somme de toutes les analyses et réalisations]</a>
+
 
 ## 🧩 Fonctionnalités principales
 
@@ -87,3 +94,91 @@ Djahiri propose un ensemble de fonctionnalités permettant aux citoyens de signa
 
 
 ## 🖥️ Interfaces de l’application
+
+### Landing page
+<p align="center">
+<img src="docs\img\captures\LandingPage.png" alt="Logo Djahiri" width="620" style="border-radius: 2px;" /></p>
+
+### Dashboard Admin
+<p align="center">
+<img src="docs\img\captures\admin_dashboard.png" alt="Logo Djahiri" width="620" style="border-radius: 2px;" /></p>
+
+### Page de modération
+<p align="center">
+<img src="docs\img\captures\admin_moderation.png" alt="Logo Djahiri" width="620" style="border-radius: 2px;" /></p>
+
+<p align="center">
+<img src="docs\img\captures\admin_validation.png" alt="Logo Djahiri" width="620" style="border-radius: 2px;" /></p>
+
+### Dashboard utilisateur
+<p align="center">
+<img src="docs\img\captures\user_dashboard.png" alt="Logo Djahiri" width="620" style="border-radius: 2px;" /></p>
+
+### Profil utilisateur
+<p align="center">
+<img src="docs\img\captures\profil.png" alt="Logo Djahiri" width="620" style="border-radius: 2px;" /></p>
+
+
+## Technologies utilisées
+
+
+## Architecture
+
+### Architecture Logicielle
+<p align="center">
+<img src="docs\img\Architecture Logicielle.png" alt="Logo Djahiri" width="620" style="border-radius: 2px;" /></p>
+
+### Structure de la base de données
+<p align="center">
+<img src="docs\img\DB_modelisation.png" alt="Logo Djahiri" width="620" style="border-radius: 2px;" /></p>
+
+### Architecture Techniques du Backend
+<p align="center">
+<img src="docs\img\archi hexago.png" alt="Logo Djahiri" width="620" style="border-radius: 2px;" /></p>
+
+### Stratégie de déploiement
+<p align="center">
+<img src="docs\img\devops.png" alt="Logo Djahiri" width="620" style="border-radius: 2px;" /></p>
+
+
+## installation et utilisation
+
+Le projet est déployé sur un serveur accessible à l'adresse suivante :
+
+- Interface web : https://stg.djahiri.ci/
+- Api : https://stg-api.djahiri.ci/swagger-ui/index.html#/
+
+Vous pouvez donc tester l'application via l'interface web ou via l'application mobile.
+
+Pour vous connecter, utilisez les identifiants suivants :
+
+Pour l'admin :
+- Email : admin2@admin.com
+- Mot de passe : password
+
+Pour l'utilisateur :
+- Email : yvesrolanddebo@gmail.com
+- Mot de passe : password
+
+Ou en créant un nouveau compte.
+
+### 1. Télécharger l'apk
+Depuis un téléphone android ou un emulateur android :
+<a href="executables\djahiri.apk">Télécharger l'apk</a>
+
+### 2. Utilisation
+
+Une fois connecté, vous pouvez:
+ - En tant qu'utilisateur, effectuer un signalement en cliquant sur le bouton "Signaler" en bas.
+ - En tant qu'admin, modérer les signalements en cliquant sur le lien "Signalements" dans le menu en haut à gauche.
+
+## Auteurs
+
+Ce projet a été réalisé par : 
+
+- Yves Roland Dago DEBO
+- Zakariae BOUAMAMA
+
+Année académique : 2025-2026
+Master 2 Cyber
+Université Catholique de Lille
