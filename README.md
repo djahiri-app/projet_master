@@ -6,15 +6,16 @@
   Plateforme mobile et web de signalement d’incivilités urbaines.
 </p>
 
-## Table des matières
 
-- [Présentation](##présentation)
-- [Fonctionnalités principales](##fonctionnalités_principaless)
-- [Interfaces de l’application](##️interfaces-de-lapplication)
-- [Technologies utilisées](##technologies-utilisées)
-- [Architecture](##architecture)
-- [Installation et utilisation](#installation-et-utilisation)
-- [Auteurs](##auteurs)
+## 📚 Table des matières
+
+- [Présentation](#-présentation)
+- [Fonctionnalités principales](#-fonctionnalités-principales)
+- [Interfaces de l’application](#️-interfaces-de-lapplication)
+- [Technologies utilisées](#️-technologies-utilisées)
+- [Architecture](#️-architecture)
+- [Installation et utilisation](#-installation-et-utilisation)
+- [Auteurs](#-auteurs)
 
 ## 🌍 Présentation
 
@@ -119,10 +120,66 @@ Djahiri propose un ensemble de fonctionnalités permettant aux citoyens de signa
 <img src="docs\img\captures\profil.png" alt="Logo Djahiri" width="620" style="border-radius: 2px;" /></p>
 
 
-## Technologies utilisées
+## 🛠️ Technologies utilisées
+
+Djahiri repose sur une architecture moderne combinant application mobile, interface web, backend sécurisé, base de données NoSQL et services cloud.
+
+### 📱 Frontend Mobile
+
+<p>
+  <img src="https://skillicons.dev/icons?i=flutter,dart" />
+</p>
+
+- **Flutter** : développement de l’application mobile multiplateforme
+- **Dart** : langage utilisé pour le développement mobile
+- **Firebase Cloud Messaging** : gestion des notifications push
+
+### 🌐 Frontend Web
+
+<p>
+  <img src="https://skillicons.dev/icons?i=react,js,html,css" />
+</p>
+
+- **ReactJS** : développement de l’interface web citoyenne et du panel d’administration
+- **HTML / CSS / JavaScript** : structure, style et interactions de l’interface
+
+### ⚙️ Backend
+
+<p>
+  <img src="https://skillicons.dev/icons?i=spring,java" />
+</p>
+
+- **Spring Boot** : développement de l’API REST sécurisée
+- **Java** : langage principal du backend
+- **Architecture hexagonale** : séparation claire entre domaine, application et infrastructure
+- **CQRS** : séparation entre les opérations de lecture et d’écriture
+- **JWT** : sécurisation des endpoints et authentification des utilisateurs
+
+### 🗄️ Base de données & Cloud
+
+<p>
+  <img src="https://skillicons.dev/icons?i=mongodb,firebase,cloudflare" />
+</p>
+
+- **MongoDB Atlas** : stockage des utilisateurs, signalements, commentaires et badges
+- **Firebase** : notifications push et événements temps réel
+- **Cloudinary** : stockage et gestion des images des signalements
+
+### 🐳 DevOps & Déploiement
+
+<p>
+  <img src="https://skillicons.dev/icons?i=docker,nginx,githubactions,ansible,ubuntu" />
+</p>
+
+- **Docker** : containerisation des services
+- **Docker Compose** : orchestration des conteneurs
+- **Nginx** : reverse proxy et gestion HTTPS
+- **GitHub Actions** : automatisation du build, des tests et du déploiement
+- **Ansible** : déploiement automatisé sur VPS
+- **Ubuntu VPS** : hébergement des environnements staging et production
 
 
-## Architecture
+## 🏗️ Architecture
 
 ### Architecture Logicielle
 <p align="center">
@@ -141,7 +198,7 @@ Djahiri propose un ensemble de fonctionnalités permettant aux citoyens de signa
 <img src="docs\img\devops.png" alt="Logo Djahiri" width="620" style="border-radius: 2px;" /></p>
 
 
-## installation et utilisation
+## 🚀 Installation et utilisation
 
 Le projet est déployé sur un serveur accessible à l'adresse suivante :
 
@@ -172,7 +229,7 @@ Une fois connecté, vous pouvez:
  - En tant qu'utilisateur, effectuer un signalement en cliquant sur le bouton "Signaler" en bas.
  - En tant qu'admin, modérer les signalements en cliquant sur le lien "Signalements" dans le menu en haut à gauche.
 
-## Auteurs
+## 👥 Auteurs
 
 Ce projet a été réalisé par : 
 
